@@ -4,11 +4,22 @@
     <ClCompile Include="E:\sandbox\sdl\sdl-game-dev\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\sandbox\sdl\sdl-game-dev\src\game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\sandbox\sdl\sdl-game-dev\src\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\sandbox\sdl\sdl-game-dev\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{749CC87B-8829-3B3F-A7BB-EFCFC883E940}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{27D82CD2-2A0C-3D01-B483-CCBAC4406786}</UniqueIdentifier>
     </Filter>

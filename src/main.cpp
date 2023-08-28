@@ -1,51 +1,21 @@
-﻿// CMakeProject3.cpp : Defines the entry point for the application.
-//
-
-#include <iostream>
-
-#include <SDL.h>
+﻿#include "Game.h"
 
 using namespace std;
 
-SDL_Window* g_pWindow = 0;
-SDL_Renderer* g_pRenderer = 0;
-bool g_bRunning = false;
-
-bool init(const char* title, int xpos, int ypos, int height, int width, int flags)
-{
-	if (SDL_Init(SDL_INIT_EVERYTHING) >= 0)
-	{
-		g_pWindow = SDL_CreateWindow(title, xpos, ypos, height, width, flags);
-
-		if (g_pWindow != 0) {
-			g_pRenderer = SDL_CreateRenderer(g_pWindow, -1, 0);
-		}
-		return true;		
-	}
-	return false;
-}
-
-void render()
-{
-	SDL_SetRenderDrawColor(g_pRenderer, 0, 0, 0, 255);
-	SDL_RenderClear(g_pRenderer);
-	SDL_RenderPresent(g_pRenderer);
-}
+std::unique_ptr<Game> game = nullptr;
 
 int main(int argc, char* argv[])
 {
-	if (init("Chapter 1: Setting upp SDL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_SHOWN))
-		g_bRunning = true;
-	else
-		return 1;
+	game = std::make_unique<Game>();
+	game->init("Chapter xx1x", 100, 100, 640,480, false);
 
-	while (g_bRunning) {
-		render();
+	while (game->running()) {
+		game->handleEvents();
+		game->update();
+		game->render();
 	}
 
-	SDL_DestroyRenderer(g_pRenderer);
-	SDL_DestroyWindow(g_pWindow);
-	SDL_Quit();
+	game->clean();
 
 	return 0;
 }

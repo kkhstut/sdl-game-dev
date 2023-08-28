@@ -59,13 +59,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">\bin\debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">E:\sandbox\sdl\sdl-game-dev\bin\debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">main.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">main</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">\bin\release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">E:\sandbox\sdl\sdl-game-dev\bin\release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">main.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|win32'">main</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|win32'">.exe</TargetExt>
@@ -120,7 +120,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>E:/sandbox/sdl/sdl-game-dev/build/Debug/main.lib</ImportLibrary>
-      <ProgramDataBaseFile>/bin/debug/main.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>E:/sandbox/sdl/sdl-game-dev/bin/debug/main.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -163,7 +163,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>E:/sandbox/sdl/sdl-game-dev/build/Release/main.lib</ImportLibrary>
-      <ProgramDataBaseFile>/bin/release/main.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>E:/sandbox/sdl/sdl-game-dev/bin/release/main.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -314,6 +314,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="E:\sandbox\sdl\sdl-game-dev\src\main.cpp" />
+    <ClInclude Include="E:\sandbox\sdl\sdl-game-dev\src\game.h" />
+    <ClCompile Include="E:\sandbox\sdl\sdl-game-dev\src\game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="E:\sandbox\sdl\sdl-game-dev\build\ZERO_CHECK.vcxproj">

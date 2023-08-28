@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 11)
 # TODO: Add tests and install targets if needed.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 
-set(BIN_DIR ${SDL_cmake_template_SOURCE_DIR}/bin)
+set(BIN_DIR ${main_SOURCE_DIR}/bin)
 
 # This path is used by FindSDL2 module. 
 # It will find include and lib folders under this directory.
@@ -23,7 +23,11 @@ ENDIF()
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 
-set(SOURCE_FILES "src/main.cpp")
+set(SOURCE_FILES 
+	"src/main.cpp"
+	"src/game.h"
+	"src/game.cpp"
+)
 
 add_executable(main 
 	${SOURCE_FILES}
